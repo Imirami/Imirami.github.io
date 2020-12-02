@@ -7,11 +7,13 @@
 <div id='mum'></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-  $.ajax({
-    url: '/test/ajax_test.txt',
-    success: function(data) {
-      $('#mum').text(data)
-    }
-  });
+  setInterval(function() {
+    $.ajax({
+      url: '/test/ajax_test.txt',
+      success: function(data) {
+        $('#mum').text(data)
+      }
+    });
+  }, 1000); 
 </script>
 </body>
